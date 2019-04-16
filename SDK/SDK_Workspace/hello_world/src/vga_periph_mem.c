@@ -37,12 +37,12 @@ void clear_graphics_screen(Xuint32 BaseAddress){
 	}
 }
 
-void draw_square(Xuint32 BaseAddress){
+void draw_square(Xuint32 BaseAddress, int cursor_pos_y, int cursor_pos_x){
 	int i, j, k;
 		for (j = 0; j < 480; j++){
 			for (k = 0; k<(640/32); k++){
 				i = j*(640/32) + k;
-				if ((j > 200) && (j < 280) && (k > 8) && (k < 12)) {
+				if ((j - cursor_pos_y > 200) && (j - cursor_pos_y < 280) && (k - cursor_pos_x > 8) && (k - cursor_pos_x < 12)) {
 					VGA_PERIPH_MEM_mWriteMemory(BaseAddress + GRAPHICS_MEM_OFF + i*4, 0xFFFFFFFF);
 				}
 				else{

@@ -137,3 +137,73 @@
 09:39:04.953 INFO  - Refreshed build settings on project hello_world 
 10:33:44.745 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
 10:36:10.473 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:06:44.000 INFO  - Processing command line option -hwspec D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+09:06:49.116 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+09:07:04.334 INFO  - Copied contents of D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+09:07:04.337 INFO  - Copied contents of D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+09:08:31.143 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:11:40.221 INFO  - Restoring local repository preferences: 
+		 D:\work\lprs2\2013_2014\Resene_vezbe\lab56\basic_system 
+09:11:40.395 ERROR - Unable to read in MSS file D:\materija\RA139-2016\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:11:40.406 ERROR - Unable to read in MSS file D:\materija\RA139-2016\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:11:40.443 WARN  - Unable to determine location of documentation for OS . 
+09:11:40.446 ERROR - Unable to read in MSS file D:\materija\RA139-2016\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:11:40.451 ERROR - Unable to read in MSS file D:\materija\RA139-2016\lab5\SDK\SDK_Workspace\hello_world_bsp\system.mss. 
+09:14:05.756 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:15:11.535 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:15:35.339 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:15:56.956 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:17:43.227 INFO  - Settings changed on project hello_world_bsp. Triggering a rebuild... 
+09:18:15.210 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:20:53.023 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:26:31.047 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:26:57.058 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:27:22.077 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:27:55.797 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:28:27.917 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:29:59.693 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:30:34.504 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:31:39.250 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:32:13.720 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:32:31.338 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:33:11.491 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:33:31.607 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:34:51.047 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:36:34.226 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:37:09.553 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:38:18.077 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:38:44.625 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:39:21.458 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:39:42.575 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:40:18.196 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:40:46.507 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:41:13.328 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:41:38.765 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:42:05.120 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:42:20.794 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:47:34.154 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:48:14.011 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:48:38.834 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:49:16.404 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:49:49.281 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:50:19.273 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:52:08.138 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:57:45.292 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:58:43.099 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:59:16.335 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+09:59:56.330 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:01:21.963 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:02:18.299 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:03:11.710 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:04:05.523 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:04:30.452 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:04:59.677 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:05:27.481 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:06:24.335 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:06:45.683 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:07:54.095 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:09:02.680 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:09:28.187 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:11:50.123 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:12:45.522 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
+10:15:26.036 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  

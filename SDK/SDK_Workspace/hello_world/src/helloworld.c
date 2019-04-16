@@ -48,6 +48,15 @@ int main()
 {
     init_platform();
     unsigned char string_s[] = "LPRS 2\n";
+    int cursor_pos_y = 0;
+    int cursor_pos_x = 0;
+    int text_pos = 350;
+
+    int smerx = 0;		// 0 - ne krece se		1 - ide levo			2 - ide desno
+    int smery = 1;		// 0 - ne krece se		1 - ide gore			2 - ide dole
+    int block_x = 0;
+
+    int i = 0;
 
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
@@ -61,9 +70,80 @@ int main()
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
-    set_cursor(350);
-    print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+    while(1){
+    	draw_square(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, cursor_pos_y, cursor_pos_x);
+    	set_cursor(text_pos);
+    	clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
+    	print_string(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR, string_s, 6);
+    	for(i=0; i<500000; i++);
+
+    	text_pos += 1;
+
+    	if(smerx == 0){
+			if(smery == 2)
+				cursor_pos_y -= 3;
+			else if(smery == 1)
+				cursor_pos_y += 3;
+    	}
+
+    	if(smerx == 1)
+			cursor_pos_x -= 1;
+    	else if(smerx == 2)
+			cursor_pos_x += 1;
+
+    	if(cursor_pos_y > 200){
+    		smery = 0;
+    		if(block_x == 0){
+    			block_x = 1;
+        		smerx = 1;
+    		}
+    		else
+				smery = 2;
+    	}
+
+    	else if(cursor_pos_y < -200){
+    		smery = 0;
+
+    		if(block_x == 0){
+    			block_x = 1;
+    			smerx = 2;
+    		}
+    		else
+    			smery = 1;
+    	}
+
+    	/*if(cursor_pos_x > 6){
+    		if(smerx)
+    			block_x = 0;
+			smerx = 0;
+			smery = 1;
+    	}
+
+    	else if(cursor_pos_x < -6){
+    		if(smerx)
+    			block_x = 0;
+    		smerx = 0;
+    		smery = 2;
+    	}*/
+
+    	if(smerx == 1){
+    		if(cursor_pos_x < -6){
+    			block_x = 0;
+    			smerx = 0;
+    			smery = 2;
+    		}
+    	}
+
+    	else if(smerx == 2){
+    		if(cursor_pos_x > 6){
+    			block_x = 0;
+    			smerx = 0;
+    			smery = 1;
+    		}
+
+    	}
+
+    }
 
 
     return 0;
