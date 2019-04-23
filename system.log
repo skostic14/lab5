@@ -3633,3 +3633,8 @@ Deleting Internal port axi_intc_0:Intr
 Deleting Internal port axi_intc_1:Irq 
 axi_intc_0 has been deleted from the project
 WARNING:EDK:2137 - Peripheral axi_intc_1 is not accessible from any processor in the system. Check Bus Interface connections and address parameters. 
+Writing filter settings....
+Done writing filter settings to:
+	D:\materija\RA139-2016\lab5\etc\system.filters
+Done writing Tab View settings to:
+	D:\materija\RA139-2016\lab5\etc\system.gui
