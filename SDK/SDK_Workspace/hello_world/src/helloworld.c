@@ -40,6 +40,9 @@
 #include "xparameters.h"
 #include "xio.h"
 #include "vga_periph_mem.h"
+#include "xil_exception.h"
+
+
 
 
 void print(char *str);
@@ -58,6 +61,9 @@ int main()
 
     int i = 0;
 
+    XStatus Status;
+	Xuint32 value1, value2, value3;
+
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x00, 0x0);// direct mode   0
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x04, 0x3);// display_mode  1
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x08, 0x1);// show frame      2
@@ -67,6 +73,16 @@ int main()
     VGA_PERIPH_MEM_mWriteMemory(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x18, 0xFF0000);// frame color      6
 
     print("Hello World\n\r");
+
+    //Set Terminal count for my_timer
+    XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x0, 0x5F5E100);
+    XIo_Out32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x4, 0x2);
+
+    value1 = XIo_In32(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR + 0x0);
+    xil_printf("\n\rvalue1 = %x.", value1);
+
+
+
 
     clear_text_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);
     clear_graphics_screen(XPAR_VGA_PERIPH_MEM_0_S_AXI_MEM0_BASEADDR);

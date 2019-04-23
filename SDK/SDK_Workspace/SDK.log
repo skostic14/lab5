@@ -207,3 +207,8 @@
 10:11:50.123 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:12:45.522 INFO  - FPGA configured successfully with bitstream "D:/materija/RA139-2016/lab5/SDK/SDK_Workspace/basic_system_hw_platform/download.bit" 
 10:15:26.036 ERROR - Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near  
+09:19:44.873 INFO  - Processing command line option -hwspec D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system.xml. 
+10:08:54.314 INFO  - Updating .bit and .bmm files from XPS's export folder. 
+10:09:18.656 INFO  - Copied contents of D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system.bit into \basic_system_hw_platform\system.bit. 
+10:09:18.661 INFO  - Copied contents of D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system_bd.bmm into \basic_system_hw_platform\system_bd.bmm. 
+10:09:32.241 INFO  - Processing command line option -hwspec D:\materija\RA139-2016\lab5\SDK\SDK_Export\hw\system.xml. 

@@ -66,9 +66,9 @@ use proc_common_v3_00_a.proc_common_pkg.all;
 -- Entity section
 ------------------------------------------------------------------------------
 -- Definition of Generics:
---   C_SLV_AWIDTH                 -- Slave interface address bus width
---   C_SLV_DWIDTH                 -- Slave interface data bus width
---   C_NUM_MEM                    -- Number of memory spaces
+--     C_SLV_AWIDTH                 -- Slave interface address bus width
+--     C_SLV_DWIDTH                 -- Slave interface data bus width
+--	  C_NUM_MEM                    -- Number of memory spaces
 --
 -- Definition of Ports:
 --   Bus2IP_Clk                   -- Bus to IP clock
@@ -128,6 +128,8 @@ entity user_logic is
     red_o          : out std_logic_vector(7 downto 0);
     green_o        : out std_logic_vector(7 downto 0);
     blue_o         : out std_logic_vector(7 downto 0);
+	 
+	 my_timer_irq                   : out std_logic;
     -- ADD USER PORTS ABOVE THIS LINE ------------------
 
     -- DO NOT EDIT BELOW THIS LINE ---------------------
@@ -254,8 +256,14 @@ architecture IMP of user_logic is
       red_o               : out std_logic_vector(7 downto 0);
       green_o             : out std_logic_vector(7 downto 0);
       blue_o              : out std_logic_vector(7 downto 0)
+		
     );
+	 --Timer signals and components 
+		
   end component;
+  signal timer_count : std_logic_vector(C_SLV_DWIDTH-1 downto 0);
+		signal timer_count_tc : std_logic;
+		signal timer_count_en : std_logic;
   
   component ODDR2
   generic(
@@ -364,6 +372,33 @@ begin
         end if;
     end if;
   end process;
+  
+  -- timer counter 
+  process (Bus2IP_Clk, Bus2IP_Resetn)
+  begin
+	if Bus2IP_Resetn = '0' then
+		timer_count <= (others => '0');
+	elsif rising_edge(Bus2IP_Clk) then
+		if (timer_count_en = '1') then
+			if (timer_count_tc = '1') then
+				timer_count <= (others => '0');
+			else timer_count <= timer_count + 1;
+			end if;
+		end if;
+	end if;
+end process; 
+	timer_count_en <= Bus2IP_WrCE(0);
+	timer_count_tc <= '1' when (timer_count >= (dir_pixel_row - 1)) else '0';
+	
+	
+process( Bus2IP_Clk ) is
+	begin 
+		if Bus2IP_Clk'event and Bus2IP_Clk = '1' then
+			if Bus2IP_Resetn = '0' then my_timer_irq <= '0';
+			else my_timer_irq <= timer_count_tc and timer_count_en;
+			end if; 
+		end if; 
+	end process;
     
 --  direct_mode      <= '0';
 --  display_mode     <= "01";
@@ -544,5 +579,6 @@ begin
     S  => '0'                -- 1-bit set input
   );
   pix_clock_n <= not(pix_clock_s);
+  
 
 end IMP;

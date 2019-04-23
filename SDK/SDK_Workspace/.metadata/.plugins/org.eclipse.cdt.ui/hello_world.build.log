@@ -1,8 +1,12 @@
-10:12:33 **** Auto Build of configuration Debug for project hello_world ****
+10:20:41 **** Auto Build of configuration Debug for project hello_world ****
 make all 
 'Building file: ../src/helloworld.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -I../../hello_world_bsp/microblaze_0/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v8.50.b -mno-xl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.d" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:65:26: warning: unused variable 'value3' [-Wunused-variable]
+../src/helloworld.c:65:18: warning: unused variable 'value2' [-Wunused-variable]
+../src/helloworld.c:64:13: warning: unused variable 'Status' [-Wunused-variable]
 'Finished building: ../src/helloworld.c'
 ' '
 'Building target: hello_world.elf'
@@ -13,7 +17,7 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../hello_world_bsp/microblaze_0/lib -ml
 'Invoking: MicroBlaze Print Size'
 mb-size hello_world.elf  |tee "hello_world.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   3558	    268	   2088	   5914	   171a	hello_world.elf
+   6638	    272	   2088	   8998	   2326	hello_world.elf
 'Finished building: hello_world.elf.size'
 ' '
 'Invoking: Xilinx ELF Check'
@@ -30,5 +34,5 @@ elfcheck passed.
 'Finished building: hello_world.elf.elfcheck'
 ' '
 
-10:12:35 Build Finished (took 1s.380ms)
+10:20:42 Build Finished (took 1s.527ms)
 
